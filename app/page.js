@@ -28,7 +28,7 @@ export default function HomePage() {
     <Header>
       <div className="bg-black">
         <motion.section
-          className="relative h-[600px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-44"
+          className="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-44"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
@@ -232,7 +232,7 @@ export default function HomePage() {
             <div className="w-full md:w-1/2 text-gray-800 space-y-6 md:pl-12">
               {/* About Me */}
               <h2 className="text-xl font-bold">About Me</h2>
-              <h3 className="text-3xl font-semibold">
+              <h3 className="text-2xl font-semibold">
                 Who is <span className="text-green">Alexander Ikosong?</span>
               </h3>
               <p className="text-lg leading-relaxed">
@@ -280,7 +280,7 @@ export default function HomePage() {
               <h2 className="text-xl font-bold text-gray-800">
                 My Favourite Tools
               </h2>
-              <p className="text-3xl text-gray-600 mt-2">
+              <p className="text-2xl text-gray-600 mt-2">
                 <span className="text-green"> Exploring the technologies</span>{" "}
                 behind my craft
               </p>
@@ -410,7 +410,7 @@ export default function HomePage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block mt-4 px-4 py-2 bg-green text-white font-bold text-center rounded-lg hover:bg-green-600"
+                      className="block mt-4 px-4 py-2 bg-green text-black font-bold text-center rounded-lg hover:bg-green-600"
                     >
                       See More
                     </a>
@@ -432,7 +432,7 @@ export default function HomePage() {
             {/* Section Header */}
             <div className="text-center mb-10">
               <h2 className="text-xl font-bold text-gray-800">Contact Me</h2>
-              <p className="text-3xl text-gray-600 mt-2">
+              <p className="text-2xl text-gray-600 mt-2">
                 Let's talk on{" "}
                 <span className="text-green">your next project</span>
               </p>
