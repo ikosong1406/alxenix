@@ -93,7 +93,7 @@ const Header = ({ children }) => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="md:hidden bg-gray-700 text-white p-4">
           <nav className="flex flex-col space-y-4">
             <Link href="/about" className="hover:text-gray-400">
@@ -107,7 +107,7 @@ const Header = ({ children }) => {
             </Link>
           </nav>
 
-          {/* Mobile Login & Sign Up */}
+         
           <div className="flex flex-col space-y-4 mt-4">
             <button
               onClick={() => router.push("/login")}
@@ -123,7 +123,7 @@ const Header = ({ children }) => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
       <main>{children}</main>
       <Footer />
     </header>
