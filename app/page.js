@@ -28,7 +28,7 @@ export default function HomePage() {
     <Header>
       <div className="bg-black">
         <motion.section
-          className="relative h-[600px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-32"
+          className="relative h-[600px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-44"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
@@ -81,11 +81,6 @@ export default function HomePage() {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
-            <div className="absolute bottom-[0] left-0 w-full bg-green text-black text-center py-4 mt-96">
-              <p className="text-lg font-semibold">
-                Web Development * App Development * UI/UX Design
-              </p>
-            </div>
           </div>
         </motion.section>
 
@@ -101,8 +96,8 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
               <span className="text-green">Services</span> I Provide
             </h2>
-            <button className="mt-4 md:mt-0 bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium">
-              View All Services
+            <button className="mt-4 md:mt-0 bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium text-sm">
+              All Services
             </button>
           </div>
 
@@ -265,7 +260,7 @@ export default function HomePage() {
               </div>
 
               {/* Button */}
-              <button className="bg-green hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium mt-8">
+              <button className="bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium mt-8">
                 Download CV
               </button>
             </div>
@@ -279,7 +274,7 @@ export default function HomePage() {
           variants={fadeInUp}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="relative h-[700px] md:h-[400px] px-6 md:px-12 lg:px-20">
+          <div className="px-6 md:px-12 lg:px-20">
             {/* Heading */}
             <div className=" mb-10">
               <h2 className="text-xl font-bold text-gray-800">
@@ -367,11 +362,6 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="absolute bottom-0 left-0 w-full bg-green text-black text-center py-4 mt-96">
-              <p className="text-lg font-semibold">
-                Web Development * App Development * UI/UX Design
-              </p>
-            </div>
           </div>
         </motion.section>
 
@@ -382,7 +372,7 @@ export default function HomePage() {
           variants={fadeInUp}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className=" mx-auto px-6 md:px-12 lg:px-20 relative h-[750px] md:h-[450px]">
+          <div className=" mx-auto px-6 md:px-12 lg:px-20">
             {/* Section Header */}
             <div className="flex justify-between items-center mb-10">
               <div>
@@ -394,8 +384,8 @@ export default function HomePage() {
                   <span className="text-green">My portfolio</span>
                 </p>
               </div>
-              <button className="mt-4 md:mt-0 px-6 py-3 bg-green text-black font-bold rounded-lg hover:bg-blue-600">
-                View All Projects
+              <button className="mt-4 md:mt-0 px-6 py-3 bg-green text-black font-bold rounded-lg hover:bg-blue-600 text-sm">
+                All Projects
               </button>
             </div>
 
@@ -427,11 +417,6 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="absolute bottom-0 left-0 w-full bg-green text-black text-center py-4 mt-96">
-              <p className="text-lg font-semibold">
-                Web Development * App Development * UI/UX Design
-              </p>
             </div>
           </div>
         </motion.section>
