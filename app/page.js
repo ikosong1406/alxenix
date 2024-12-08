@@ -28,7 +28,7 @@ export default function HomePage() {
     <Header>
       <div className="bg-black">
         <motion.section
-          className="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-44"
+          className="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-32"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
