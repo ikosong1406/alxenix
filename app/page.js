@@ -9,7 +9,11 @@ import cargif from "./images/download.gif";
 import hire from "./images/hire.png";
 import hire1 from "./images/hire1.png";
 import PortfolioProjects from "./components/Projects.json";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaPenNib } from "react-icons/fa";
+import { FaMobile } from "react-icons/fa6";
+import { MdWeb } from "react-icons/md";
+import { IoGlobeSharp } from "react-icons/io5";
 
 // Animation variants for fade-in effect
 const fadeInUp = {
@@ -109,23 +113,10 @@ export default function HomePage() {
             {/* Frontend Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-blue-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 10h11M9 21V3m4 18v-7m4 7v-3m0 0H3"
-                  />
-                </svg>
+                <MdWeb style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Frontend Development
+                Website Development
               </h3>
               <p className="text-gray-600">
                 Crafting stunning, responsive, and user-friendly interfaces
@@ -136,20 +127,7 @@ export default function HomePage() {
             {/* Backend Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-green-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 10h16M10 14h4m-4 4h4"
-                  />
-                </svg>
+                <IoGlobeSharp style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Backend Development
@@ -163,20 +141,7 @@ export default function HomePage() {
             {/* UI/UX Design */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-purple-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 10h16M10 14h4m-4 4h4"
-                  />
-                </svg>
+                <FaPenNib style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
               <p className="text-gray-600">
@@ -188,20 +153,7 @@ export default function HomePage() {
             {/* Mobile App Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-yellow-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 2h4m0 0v2m0 0v14m-4-2h4M10 20h4M4 6h16M4 10h16"
-                  />
-                </svg>
+                <FaMobile style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Mobile App Development
@@ -249,21 +201,24 @@ export default function HomePage() {
               {/* Key Metrics */}
               <div className="flex md:flex-row justify-between items-start md:items-center mt-8">
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-green">50+</h4>
+                  <h4 className="text-2xl font-bold text-green">10+</h4>
                   <p className="text-gray-600 font-bold">Projects Completed</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-green">10+</h4>
+                  <h4 className="text-2xl font-bold text-green">5+</h4>
                   <p className="text-gray-600 font-bold">Industries Covered</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-green">7+</h4>
+                  <h4 className="text-2xl font-bold text-green">3+</h4>
                   <p className="text-gray-600 font-bold">Years of Experience</p>
                 </div>
               </div>
 
               {/* Button */}
-              <button className="bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium mt-8">
+              <button
+                className="bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium mt-8"
+                onClick={() => (window.location.href = "/about")}
+              >
                 Read more about me
               </button>
             </div>
@@ -412,14 +367,6 @@ export default function HomePage() {
                       {project.name}
                     </h3>
                     <p className="text-gray-600 mt-2">{project.description}</p>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block mt-4 px-4 py-2 bg-green text-black font-bold text-center rounded-lg hover:bg-green-600"
-                    >
-                      See More
-                    </a>
                   </div>
                 </div>
               ))}
@@ -447,23 +394,15 @@ export default function HomePage() {
             {/* Contact Card */}
             <div className="mx-auto bg-black2 shadow-lg rounded-lg p-8 md:w-1/2 w-5/6">
               <div className="space-y-6">
-                {/* Address */}
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Address
-                  </h3>
-                  <p className="text-gray-600">
-                    123 Main Street, City, Country
-                  </p>
-                </div>
-
                 {/* Contact Information */}
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800">
                     Contact
                   </h3>
-                  <p className="text-gray-600">Phone: +1 (123) 456-7890</p>
-                  <p className="text-gray-600">Email: example@example.com</p>
+                  <p className="text-gray-600">Phone: +234 7012571616</p>
+                  <p className="text-gray-600">
+                    Email: alexandervirtuous14@gmail.com
+                  </p>
                 </div>
 
                 {/* Operating Hours */}
@@ -482,10 +421,10 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className="text-green text-2xl hover:text-gray-200 bg-black p-2 rounded-xl"
                   >
-                    <FaFacebook />
+                    <FaWhatsapp />
                   </a>
                   <a
-                    href="https://www.twitter.com"
+                    href="https://x.com/Alexandervirt14"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green text-2xl hover:text-gray-200 bg-black p-2 rounded-xl"
@@ -493,20 +432,12 @@ export default function HomePage() {
                     <FaTwitter />
                   </a>
                   <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/alexander-virtuous-ikosong-4533b6235/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green text-2xl hover:text-gray-200 bg-black p-2 rounded-xl"
                   >
                     <FaLinkedin />
-                  </a>
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green text-2xl hover:text-gray-200 bg-black p-2 rounded-xl"
-                  >
-                    <FaInstagram />
                   </a>
                 </div>
               </div>

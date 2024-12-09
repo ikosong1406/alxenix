@@ -5,6 +5,10 @@ import Image from "next/image";
 import { motion } from "framer-motion"; // Import framer motion
 import Header from "../components/Header";
 import cargif from "../images/download.gif";
+import { FaPenNib } from "react-icons/fa";
+import { FaMobile } from "react-icons/fa6";
+import { MdWeb } from "react-icons/md";
+import { IoGlobeSharp } from "react-icons/io5";
 
 // Animation variants for fade-in effect
 const fadeInUp = {
@@ -65,20 +69,7 @@ const page = () => {
             {/* Frontend Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-blue-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 10h11M9 21V3m4 18v-7m4 7v-3m0 0H3"
-                  />
-                </svg>
+                <MdWeb style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Frontend Development
@@ -92,20 +83,7 @@ const page = () => {
             {/* Backend Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-green-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 10h16M10 14h4m-4 4h4"
-                  />
-                </svg>
+                <IoGlobeSharp style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Backend Development
@@ -119,20 +97,7 @@ const page = () => {
             {/* UI/UX Design */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-purple-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 10h16M10 14h4m-4 4h4"
-                  />
-                </svg>
+                <FaPenNib style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
               <p className="text-gray-600">
@@ -144,20 +109,7 @@ const page = () => {
             {/* Mobile App Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-yellow-500 mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 2h4m0 0v2m0 0v14m-4-2h4M10 20h4M4 6h16M4 10h16"
-                  />
-                </svg>
+                <FaMobile style={{ width: 30, height: 30 }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Mobile App Development

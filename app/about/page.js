@@ -81,15 +81,15 @@ const page = () => {
               {/* Key Metrics */}
               <div className="flex md:flex-row justify-between items-start md:items-center mt-8">
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-green">50+</h4>
+                  <h4 className="text-2xl font-bold text-green">10+</h4>
                   <p className="text-gray-600 font-bold">Projects Completed</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-green">10+</h4>
+                  <h4 className="text-2xl font-bold text-green">5+</h4>
                   <p className="text-gray-600 font-bold">Industries Covered</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-green">7+</h4>
+                  <h4 className="text-2xl font-bold text-green">3+</h4>
                   <p className="text-gray-600 font-bold">Years of Experience</p>
                 </div>
               </div>
