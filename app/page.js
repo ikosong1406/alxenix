@@ -60,7 +60,7 @@ export default function HomePage() {
               <div className="flex md:space-x-4 md:space-y-0 justify-between w-96">
                 <button
                   className="bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium"
-                  onClick={() => (window.location.href = "/portfolio")}
+                  onClick={() => (window.location.href = "/projects")}
                 >
                   View My Work
                 </button>
