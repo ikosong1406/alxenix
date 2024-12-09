@@ -19,7 +19,7 @@ const Header = ({ children }) => {
   return (
     <header className=" text-white border-b">
       <div
-        style={{ backgroundColor: "transparent", zIndex: 99 }}
+        style={{ backgroundColor: "transparent", zIndex: 70 }}
         className="bg-transparent fixed container mx-auto flex justify-between items-center p-6"
       >
         {/* Logo */}
