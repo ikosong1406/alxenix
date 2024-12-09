@@ -109,11 +109,11 @@ const ProjectsPage = () => {
 
         {modal && selectedProject && (
           <div
-            className="fixed inset-0 z-[105] bg-black bg-opacity-70 flex items-center justify-center"
+            className="fixed inset-0 z-[105] bg-black bg-opacity-70 flex items-center justify-center pt-40"
             onClick={closeModal} // Close modal when clicking the overlay
           >
             <div
-              className="relative bg-black rounded-lg shadow-lg w-full max-w-4xl h-auto md:h-auto"
+              className="relative bg-black rounded-lg shadow-lg w-full max-w-4xl h-auto md:h-auto py-8"
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
             >
               {/* Close Button */}
