@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import projects from "../../components/Projects.json";
+import projects from "../../components/Projects.js";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Header from "../../components/Header";
@@ -71,8 +71,8 @@ const ProjectDetails = () => {
         {/* Main Content */}
         <div className="container mx-auto px-6 py-12">
           {/* Project Main Image */}
-          <img
-            src={project.pictures[0]}
+          <Image
+            src={project.pictures}
             alt={project.name}
             className="w-full h-80 object-cover rounded-lg shadow-md"
           />
@@ -140,23 +140,6 @@ const ProjectDetails = () => {
               </div>
             </div>
           </div>
-
-          {/* Additional Images */}
-          {Array.isArray(project.pictures) && project.pictures.length > 1 && (
-            <div className="mt-12">
-              <h3 className="text-xl font-semibold">Additional Pictures</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-                {project.pictures.slice(1).map((pic, index) => (
-                  <img
-                    key={index}
-                    src={pic}
-                    alt={`Additional Project ${index + 1}`}
-                    className="w-full h-40 object-cover rounded-lg shadow-md"
-                  />
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </Header>

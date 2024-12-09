@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import cargif from "./images/download.gif";
 import hire from "./images/hire.png";
 import hire1 from "./images/hire1.png";
-import PortfolioProjects from "./components/Projects.json";
+import PortfolioProjects from "./components/Projects.js";
 import { FaWhatsapp, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { FaPenNib } from "react-icons/fa";
 import { FaMobile } from "react-icons/fa6";
@@ -357,8 +357,8 @@ export default function HomePage() {
                   key={index}
                   className="bg-black2 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
                 >
-                  <img
-                    src={project.pictures[0]}
+                  <Image
+                    src={project.pictures}
                     alt={project.name}
                     className="w-full h-48 object-cover"
                   />

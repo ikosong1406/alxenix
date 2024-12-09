@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation"; // For navigation
 import Header from "../components/Header";
 import cargif from "../images/download.gif";
-import PortfolioProjects from "../components/Projects.json";
+import PortfolioProjects from "../components/Projects.js";
 
 // Animation variants for fade-in effect
 const fadeInUp = {
@@ -78,8 +78,8 @@ const ProjectsPage = () => {
                   key={index}
                   className="bg-black2 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
                 >
-                  <img
-                    src={project.pictures[0]}
+                  <Image
+                    src={project.pictures}
                     alt={project.name}
                     className="w-full h-48 object-cover"
                   />
