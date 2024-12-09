@@ -37,25 +37,25 @@ const Header = ({ children }) => {
         <nav className="flex md:flex space-x-6">
           <span
             onClick={() => router.push("/about")}
-            className="hover:text-gray-400 cursor-pointer text-lg"
+            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
           >
             Home
           </span>
           <span
             onClick={() => router.push("/faq")}
-            className="hover:text-gray-400 cursor-pointer text-lg"
+            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
           >
             Services
           </span>
           <span
             onClick={() => router.push("/privacy")}
-            className="hover:text-gray-400 cursor-pointer text-lg"
+            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
           >
             Projects
           </span>
           <span
             onClick={() => router.push("/privacy")}
-            className="hover:text-gray-400 cursor-pointer text-lg"
+            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
           >
             About
           </span>
