@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation"; // For navigation
 import Header from "../components/Header";
 import cargif from "../images/download.gif";
 import PortfolioProjects from "../components/Projects.json";
@@ -14,17 +15,10 @@ const fadeInUp = {
 };
 
 const ProjectsPage = () => {
-  const [modal, setModal] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const router = useRouter();
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-    setModal(true);
-  };
-
-  const closeModal = () => {
-    setModal(false);
-    setSelectedProject(null);
+  const navigateToDetails = (project) => {
+    router.push(`/projects/${project.id}`);
   };
 
   return (
@@ -95,7 +89,7 @@ const ProjectsPage = () => {
                     </h3>
                     <p className="text-gray-600 mt-2">{project.description}</p>
                     <button
-                      onClick={() => openModal(project)}
+                      onClick={() => navigateToDetails(project)}
                       className="block mt-4 px-4 py-2 bg-green text-black font-bold text-center rounded-lg hover:bg-green-600"
                     >
                       See More
@@ -106,97 +100,6 @@ const ProjectsPage = () => {
             </div>
           </div>
         </motion.section>
-
-        {modal && selectedProject && (
-          <div
-            className="fixed inset-0 z-[105] bg-black bg-opacity-70 flex items-center justify-center pt-40"
-            onClick={closeModal} // Close modal when clicking the overlay
-          >
-            <div
-              className="relative bg-black rounded-lg shadow-lg w-full max-w-4xl h-auto md:h-auto py-8"
-              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
-            >
-              {/* Close Button */}
-              <button
-                onClick={closeModal}
-                className="absolute top-4 right-4 text-green hover:text-gray-800 text-3xl"
-              >
-                &times;
-              </button>
-
-              {/* Modal Content */}
-              <div className="p-6">
-                {/* Project Picture */}
-                <img
-                  src={selectedProject.pictures[0]}
-                  alt={selectedProject.name}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-
-                {/* Project Details */}
-                <div className="mt-6 flex flex-col md:flex-row gap-6">
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-green">
-                      {selectedProject.name}
-                    </h2>
-                    <p className="text-gray-600 mt-2">
-                      {selectedProject.description}
-                    </p>
-                  </div>
-                  <div className="flex-1 bg-green text-black p-4 rounded-lg">
-                    <strong>Category:</strong>
-                    <p>{selectedProject.category}</p>
-                    <strong>Duration:</strong>
-                    <p>{selectedProject.duration}</p>
-                    <strong>Client:</strong>
-                    <p>{selectedProject.client}</p>
-                    <strong>Link:</strong>{" "}
-                    <p>
-                      <a
-                        href={selectedProject.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 underline"
-                      >
-                        View Project
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                {/* Additional Details */}
-                <div>
-                  <h3 className="text-lg font-semibold">Problem:</h3>
-                  <p className="text-gray-600">{selectedProject.problem}</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Solution:</h3>
-                  <p className="text-gray-600">{selectedProject.solution}</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Technologies:</h3>
-                  <ul className="list-disc list-inside text-gray-600">
-                    {selectedProject.technologies.map((tech, i) => (
-                      <li key={i}>{tech}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Other Pictures */}
-                <div className="grid grid-cols-2 gap-4 mt-4">
-                  {selectedProject.pictures.slice(1).map((pic, i) => (
-                    <img
-                      key={i}
-                      src={pic}
-                      alt={`Project ${i}`}
-                      className="w-full h-32 object-cover rounded-lg"
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </Header>
   );

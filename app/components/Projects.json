@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "E-Commerce Platform",
     "description": "An end-to-end e-commerce solution for fashion retail, featuring advanced search, secure checkout, and responsive design.",
     "category": "Web Development",
@@ -18,6 +19,7 @@
     "link": "https://www.fashionhub.com"
   },
   {
+    "id": 2,
     "name": "Fitness Mobile App",
     "description": "A mobile app that helps users track workouts, monitor progress, and connect with fitness coaches.",
     "category": "Mobile App Development",
