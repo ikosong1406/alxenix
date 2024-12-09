@@ -261,7 +261,7 @@ export default function HomePage() {
 
               {/* Button */}
               <button className="bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium mt-8">
-                Download CV
+                Read more about me
               </button>
             </div>
           </div>
