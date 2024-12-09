@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import cargif from "../images/download.gif";
 import hire from "../images/hire.png";
+import { ImBriefcase } from "react-icons/im";
+import { FaGraduationCap } from "react-icons/fa";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -121,21 +123,8 @@ const page = () => {
             {/* Frontend Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-blue-500 mb-4 flex border-b pb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 10h11M9 21V3m4 18v-7m4 7v-3m0 0H3"
-                  />
-                </svg>
-                <h3 className="text-xl font-semibold align-center mt-4">
+                <ImBriefcase style={{ width: 30, height: 30 }} />
+                <h3 className="text-xl font-semibold align-center ml-2 mt-2">
                   Work Experience
                 </h3>
               </div>
@@ -171,21 +160,10 @@ const page = () => {
             {/* Backend Development */}
             <div className="bg-black2 shadow-lg rounded-lg p-6 flex flex-col">
               <div className="text-green-500 mb-4 flex border-b pb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 10h16M10 14h4m-4 4h4"
-                  />
-                </svg>
-                <h3 className="text-xl font-semibold mt-2">Education</h3>
+                <FaGraduationCap style={{ width: 30, height: 30 }} />
+                <h3 className="text-xl font-semibold align-center ml-2 mt-2">
+                  Education
+                </h3>
               </div>
               <div className="flex justify-between mt-2">
                 <div>
