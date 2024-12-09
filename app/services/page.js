@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; // For page navigation
 import { motion } from "framer-motion"; // Import framer motion
 import Header from "../components/Header";
 import cargif from "../images/download.gif";

@@ -96,7 +96,10 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
               <span className="text-green">Services</span> I Provide
             </h2>
-            <button className="mt-4 md:mt-0 bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium text-sm">
+            <button
+              className="mt-4 md:mt-0 bg-green hover:bg-blue-600 text-black px-6 py-3 rounded-lg font-medium text-sm"
+              onClick={() => (window.location.href = "/services")}
+            >
               All Services
             </button>
           </div>
@@ -384,7 +387,10 @@ export default function HomePage() {
                   <span className="text-green">My portfolio</span>
                 </p>
               </div>
-              <button className="mt-4 md:mt-0 px-6 py-3 bg-green text-black font-bold rounded-lg hover:bg-blue-600 text-sm">
+              <button
+                className="mt-4 md:mt-0 px-6 py-3 bg-green text-black font-bold rounded-lg hover:bg-blue-600 text-sm"
+                onClick={() => (window.location.href = "/projects")}
+              >
                 All Projects
               </button>
             </div>
