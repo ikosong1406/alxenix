@@ -34,45 +34,35 @@ const Header = ({ children }) => {
         </div>
 
         {/* Navigation Links for Desktop */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="flex md:flex space-x-6">
           <span
             onClick={() => router.push("/about")}
-            className="hover:text-gray-400 cursor-pointer text-xl"
+            className="hover:text-gray-400 cursor-pointer text-lg"
           >
             Home
           </span>
           <span
             onClick={() => router.push("/faq")}
-            className="hover:text-gray-400 cursor-pointer text-xl"
+            className="hover:text-gray-400 cursor-pointer text-lg"
           >
             Services
           </span>
           <span
             onClick={() => router.push("/privacy")}
-            className="hover:text-gray-400 cursor-pointer text-xl"
+            className="hover:text-gray-400 cursor-pointer text-lg"
           >
             Projects
           </span>
           <span
             onClick={() => router.push("/privacy")}
-            className="hover:text-gray-400 cursor-pointer text-xl"
+            className="hover:text-gray-400 cursor-pointer text-lg"
           >
-            About Me
+            About
           </span>
         </nav>
 
-        {/* Login & Sign Up Buttons for Desktop */}
-        <div className="hidden md:flex space-x-4">
-          <button
-            onClick={() => router.push("/login")}
-            className="px-6 py-3 bg-green rounded-lg text-xl text-black font-bold"
-          >
-            Let's Talk
-          </button>
-        </div>
-
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="hidden md:hidden">
           <button onClick={toggleMenu} aria-label="Menu toggle button">
             <svg
               className="w-6 h-6"
