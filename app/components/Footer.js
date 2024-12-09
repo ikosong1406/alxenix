@@ -22,16 +22,16 @@ export default function Footer() {
             About Us
           </Link>
           <Link
-            href="/terms"
+            href="/services"
             className="text-gray-400 hover:text-blue-400 transition"
           >
-            Terms of Service
+            Services
           </Link>
           <Link
-            href="/privacy"
+            href="/projects"
             className="text-gray-400 hover:text-blue-400 transition"
           >
-            Privacy Policy
+            Projects
           </Link>
         </div>
       </div>
