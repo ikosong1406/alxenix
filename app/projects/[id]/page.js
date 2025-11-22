@@ -74,7 +74,7 @@ const ProjectDetails = () => {
           <Image
             src={project.pictures}
             alt={project.name}
-            className="w-full h-80 object-cover rounded-lg shadow-md"
+            className="w-full h-1/4 object-cover rounded-lg shadow-md"
           />
 
           {/* Project Details Section */}

@@ -4,68 +4,69 @@
 import { useRouter } from "next/navigation";
 import logo from "../images/logo.png";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import Footer from "./Footer";
+import Footer from "./Footer"; // Assuming you want to keep the Footer component here
 
 const Header = ({ children }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Close the mobile menu on route change
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsOpen(false);
+    };
+
+    router.events?.on("routeChangeStart", handleRouteChange);
+
+    return () => {
+      router.events?.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Define navigation items (removed "About")
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+  ];
+
   return (
-    <header className=" text-white border-b">
+    <header className="text-white">
       <div
         style={{ backgroundColor: "transparent", zIndex: 70 }}
-        className="bg-transparent fixed container mx-auto flex justify-between items-center p-6"
+        className="bg-transparent fixed w-full container mx-auto flex justify-between items-center p-6"
       >
         {/* Logo */}
-        <div className="flex justify-between items-center">
+        <div
+          className="flex items-center space-x-2 cursor-pointer"
+          onClick={() => router.push("/")}
+        >
           <Image src={logo} alt="Logo" width={25} height={25} />
-          <div
-            className="text-xl font-bold cursor-pointer"
-            onClick={() => router.push("/")}
-          >
-            Alxenix
-          </div>
+          <div className="text-xl font-bold">Alxenix</div>
         </div>
 
         {/* Navigation Links for Desktop */}
-        <nav className="flex md:flex space-x-6">
-          <span
-            onClick={() => router.push("/")}
-            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
-          >
-            Home
-          </span>
-          <span
-            onClick={() => router.push("/services")}
-            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
-          >
-            Services
-          </span>
-          <span
-            onClick={() => router.push("/projects")}
-            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
-          >
-            Projects
-          </span>
-          <span
-            onClick={() => router.push("/about")}
-            className="hover:text-gray-400 cursor-pointer text-sm md:text-xl"
-          >
-            About
-          </span>
+        <nav className="hidden md:flex space-x-8">
+          {navItems.map((item) => (
+            <Link key={item.name} href={item.path} passHref>
+              <span className="hover:text-gray-400 cursor-pointer text-base font-medium transition duration-300">
+                {item.name}
+              </span>
+            </Link>
+          ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <div className="hidden md:hidden">
+        {/* Mobile Menu Button (Hamburger/Close Icon) */}
+        <div className="md:hidden z-50">
           <button onClick={toggleMenu} aria-label="Menu toggle button">
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -82,39 +83,30 @@ const Header = ({ children }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {/* {isOpen && (
-        <div className="md:hidden bg-gray-700 text-white p-4">
-          <nav className="flex flex-col space-y-4">
-            <Link href="/about" className="hover:text-gray-400">
-              About Us
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 transform transition-transform duration-500 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } md:hidden z-40 flex flex-col justify-center items-center`}
+      >
+        <nav className="flex flex-col space-y-8 text-2xl font-semibold">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.path}
+              passHref
+              onClick={toggleMenu}
+            >
+              <span className="hover:text-gray-400 cursor-pointer transition duration-300">
+                {item.name}
+              </span>
             </Link>
-            <Link href="/faq" className="hover:text-gray-400">
-              FAQ
-            </Link>
-            <Link href="/privacy" className="hover:text-gray-400">
-              Privacy Policy
-            </Link>
-          </nav>
+          ))}
+        </nav>
+      </div>
 
-         
-          <div className="flex flex-col space-y-4 mt-4">
-            <button
-              onClick={() => router.push("/login")}
-              className="px-4 py-2 bg-gold rounded-lg"
-            >
-              Login
-            </button>
-            <button
-              onClick={() => router.push("/signup")}
-              className="px-4 py-2 bg-transparent hover:bg-bluey rounded-lg border"
-            >
-              Sign Up
-            </button>
-          </div>
-        </div>
-      )} */}
-      <main>{children}</main>
+      {/* Main Content Area - Ensure it starts below the fixed header */}
+      <main className="pt-20">{children}</main>
       <Footer />
     </header>
   );

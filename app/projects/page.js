@@ -81,7 +81,7 @@ const ProjectsPage = () => {
                   <Image
                     src={project.pictures}
                     alt={project.name}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-96 object-cover"
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-800">
