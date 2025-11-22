@@ -268,7 +268,7 @@ export default function HomePage() {
               ].map((t) => (
                 <div
                   key={t}
-                  className="bg-green p-4 rounded-lg shadow text-center font-semibold text-white"
+                  className="bg-green p-4 rounded-lg shadow text-center font-semibold text-black"
                 >
                   {t}
                 </div>
