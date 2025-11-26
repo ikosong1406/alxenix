@@ -199,7 +199,7 @@ const CaseStudyDetail = () => {
           {/* --- Key Metrics Section --- */}
           <div className="mt-16">
             <h2 className="text-3xl font-bold mb-4 text-green">
-              Contract Impact & Metrics 📈
+              Contract Impact & Metrics
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {Array.isArray(keyMetrics) &&

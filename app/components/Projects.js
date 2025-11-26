@@ -86,7 +86,7 @@ const caseStudies = [
       "Maintained 99.9% platform uptime during peak usage.",
     ],
     process:
-      "Used Scrum with a strong focus on **Security-by-Design** principles due to the sensitive nature of user data (resumes, application details).",
+      "Used Scrum with a strong focus on Security-by-Design principles due to the sensitive nature of user data (resumes, application details).",
 
     pictures: jobbinexImage,
     link: "https://jobbinex.com",
