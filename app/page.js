@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Header from "./components/Header";
 import cargif from "./images/download.gif";
 import PortfolioProjects from "./components/Projects.js";
+import Contact from "./components/Contact.js";
 import {
   FaWhatsapp,
   FaTwitter,
@@ -105,14 +106,14 @@ export default function HomePage() {
           viewport={{ once: true }}
         >
           <div className="container mx-auto px-5 sm:px-8 lg:px-20">
-            <div className="flex flex-col lg:flex-row justify-between gap-8">
-              <div className="max-w-xl">
+            <div className="flex flex-col justify-between gap-8">
+              <div className="">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-3">
                   What We Do
                 </h2>
                 <p className="text-gray-400 text-base sm:text-lg">
                   A digital studio delivering modern engineering for ambitious
-                  brands — web, mobile, backend & design.
+                  brands web, mobile, backend & design.
                 </p>
               </div>
 
@@ -150,11 +151,6 @@ export default function HomePage() {
           variants={fadeInUp}
         >
           <div className="container mx-auto px-5 sm:px-8 lg:px-20 flex flex-col md:flex-row items-center gap-10">
-            {/* Neutral Illustration Block */}
-            {/* <div className="w-full md:w-1/2">
-              <div className="w-full h-64 sm:h-72 md:h-80 rounded-xl bg-gradient-to-br from-green/20 to-white/10 shadow-lg" />
-            </div> */}
-
             {/* Text */}
             <div className="w-full ">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -170,17 +166,6 @@ export default function HomePage() {
                 <MetricCard value="10+" label="Projects" />
                 <MetricCard value="6+" label="Industries" />
                 <MetricCard value="5+" label="Years" />
-              </div>
-
-              {/* Founder text remains (no image) */}
-              <div className="mt-6">
-                <h4 className="text-lg font-semibold text-white">
-                  Meet our founder
-                </h4>
-                <p className="text-gray-300 text-sm sm:text-base mt-1">
-                  Alexander Ikosong leads engineering & product strategy at
-                  Alxenix. Combining design thinking with full-stack expertise.
-                </p>
               </div>
             </div>
           </div>
@@ -255,7 +240,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold text-gray-700 mb-4">
               Tools & Technologies
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
                 "React",
                 "Next.js",
@@ -284,33 +269,7 @@ export default function HomePage() {
           whileInView="visible"
           variants={fadeInUp}
         >
-          <div className="container mx-auto px-5 sm:px-8 lg:px-20 text-white">
-            <div className="bg-black2 p-6 sm:p-8 rounded-xl shadow-lg flex flex-col md:flex-row gap-6 items-center justify-between">
-              <div>
-                <h3 className="text-2xl font-bold">
-                  Ready to build something great?
-                </h3>
-                <p className="text-gray-300 mt-1">
-                  Tell us about your project.
-                </p>
-              </div>
-
-              <button
-                onClick={goTo("/contact")}
-                className="bg-green text-black font-semibold px-6 py-3 rounded-lg"
-              >
-                Start Your Project
-              </button>
-            </div>
-
-            <div className="mt-6 flex flex-col sm:flex-row justify-between text-gray-400 text-sm gap-4">
-              <div className="flex gap-4">
-                <FaWhatsapp className="text-xl" />
-                <FaTwitter className="text-xl" />
-                <FaLinkedin className="text-xl" />
-              </div>
-            </div>
-          </div>
+          <Contact />
         </motion.section>
       </div>
     </Header>

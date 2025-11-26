@@ -32,7 +32,6 @@ const Header = ({ children }) => {
   // Define navigation items (removed "About")
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
     { name: "Projects", path: "/projects" },
   ];
 

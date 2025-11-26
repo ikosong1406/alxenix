@@ -55,22 +55,8 @@ const ProjectsPage = () => {
         </motion.section>
 
         {/* Projects Section */}
-        <motion.section
-          className="py-12 md:py-16 lg:py-20"
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInUp}
-          viewport={{ once: true, amount: 0.3 }}
-        >
+        <section className="py-12 md:py-16 lg:py-20">
           <div className="mx-auto px-6 md:px-12 lg:px-20 py-8">
-            <div className="text-center mb-10">
-              <h2 className="text-xl font-bold text-gray-800">My Portfolio</h2>
-              <p className="text-2xl text-gray-600 mt-2">
-                Let&apos;s have a look at{" "}
-                <span className="text-green">My Portfolio</span>
-              </p>
-            </div>
-
             {/* Project Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {PortfolioProjects.map((project, index) => (
@@ -99,7 +85,7 @@ const ProjectsPage = () => {
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
       </div>
     </Header>
   );
