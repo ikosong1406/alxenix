@@ -97,10 +97,7 @@ const CaseStudyDetail = () => {
               {/* GREEN ACCENT */}
               Case Study Overview
             </h3>
-            <h1 className="text-4xl md:text-6xl font-extrabold mt-2">{name}</h1>
-            <p className="text-gray-400 mt-2">
-              <span className="font-bold">{projectScope}</span>
-            </p>
+            <h1 className="text-3xl md:text-6xl font-extrabold mt-2">{name}</h1>
           </div>
         </motion.section>
 
@@ -121,7 +118,7 @@ const CaseStudyDetail = () => {
             {/* Left Column: Description & Narrative */}
             <div className="lg:col-span-2 space-y-8">
               <motion.div variants={fadeInUp}>
-                <h2 className="text-3xl font-bold text-green border-b border-gray-700 pb-2">
+                <h2 className="text-2xl font-bold text-green border-b border-gray-700 pb-2">
                   {" "}
                   {/* GREEN ACCENT */}
                   Client Challenge ({client})
@@ -132,7 +129,7 @@ const CaseStudyDetail = () => {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <h2 className="text-3xl font-bold text-green border-b border-gray-700 pb-2">
+                <h2 className="text-2xl font-bold text-green border-b border-gray-700 pb-2">
                   {" "}
                   {/* GREEN ACCENT */}
                   Solution Delivered
@@ -184,7 +181,7 @@ const CaseStudyDetail = () => {
 
           {/* --- Technical Stack Section --- */}
           <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-4 text-green">
+            <h2 className="text-2xl font-bold mb-4 text-green">
               {" "}
               {/* GREEN ACCENT */}
               Technical Stack Overview
@@ -198,7 +195,7 @@ const CaseStudyDetail = () => {
 
           {/* --- Key Metrics Section --- */}
           <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-4 text-green">
+            <h2 className="text-2xl font-bold mb-4 text-green">
               Contract Impact & Metrics
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
