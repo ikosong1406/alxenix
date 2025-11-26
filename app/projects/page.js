@@ -26,7 +26,7 @@ const ProjectsPage = () => {
       <div className="bg-black">
         {/* Hero Section */}
         <motion.section
-          className="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-32"
+          className="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center pt-20"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}

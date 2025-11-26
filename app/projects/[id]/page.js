@@ -75,7 +75,7 @@ const CaseStudyDetail = () => {
       <div className="bg-gray-900 min-h-screen text-white">
         {/* Hero Section */}
         <motion.section
-          className="relative flex flex-col items-center justify-center pt-32 h-64 overflow-hidden"
+          className="relative flex flex-col items-center justify-center pt-32 pb-10 h-64 overflow-hidden"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
@@ -84,11 +84,11 @@ const CaseStudyDetail = () => {
           <Image
             src={cargif}
             alt="Background GIF"
-            className="absolute inset-0 w-full h-full object-cover opacity-10"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gray-900 bg-opacity-30" />
+          <div className="absolute inset-0 bg-black bg-opacity-70" />
 
           {/* Content */}
           <div className="relative text-center px-6 py-6 md:px-12 lg:px-20">
