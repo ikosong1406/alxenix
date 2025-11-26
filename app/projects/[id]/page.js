@@ -88,7 +88,7 @@ const CaseStudyDetail = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gray-900 bg-opacity-80" />
+          <div className="absolute inset-0 bg-gray-900 bg-opacity-30" />
 
           {/* Content */}
           <div className="relative text-center px-6 py-6 md:px-12 lg:px-20">

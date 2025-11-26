@@ -39,7 +39,7 @@ const ProjectsPage = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-60" />
+          <div className="absolute inset-0 bg-black bg-opacity-40" />
 
           {/* Content */}
           <div className="relative items-center justify-between px-6 py-6 md:px-12 lg:px-20">

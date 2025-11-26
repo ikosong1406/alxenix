@@ -48,7 +48,7 @@ export default function HomePage() {
             priority
           />
 
-          <div className="relative z-10 bg-black/70">
+          <div className="relative z-10 bg-black/30">
             <div className="container mx-auto px-5 sm:px-8 lg:px-20 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
               {/* Text */}
               <div className="w-full md:w-1/2 text-white">
