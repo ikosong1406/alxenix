@@ -9,7 +9,7 @@ const ContactSection = () => {
   // Placeholder for your actual social links
   const SOCIAL_LINKS = {
     whatsapp: "https://wa.me/YOUR_PHONE_NUMBER", // CHANGE THIS
-    x: "https://x.com/Alexandervirt14", // CHANGE THIS TO YOUR X/Twitter handle
+    x: "https://x.com/Founder_engr", // CHANGE THIS TO YOUR X/Twitter handle
   };
 
   const handleCtaClick = () => {

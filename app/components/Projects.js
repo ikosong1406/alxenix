@@ -1,54 +1,53 @@
 // --- Placeholder Imports for New Cases ---
-// import uarraImage from "../images/uarra-web.png";
+import uarraImage from "../images/uarra.png";
 import punterhubImage from "../images/punterhub.png";
 import trashitImage from "../images/trashit.png";
 import jobbinexImage from "../images/jobbinex.png";
 // ------------------------------------------
 
 const caseStudies = [
-  // {
-  //   id: 1,
-  //   name: "Uarra Logistics Ecosystem",
-  //   client: "Uarra (Logistics Company)",
-  //   category: "Full Contract Solution: Logistics & Multi-App Ecosystem",
-  //   projectScope:
-  //     "Four Dedicated Products: **ALT** (Web Admin), **HERO** (Driver App), **MERCHANT** (User/Order App), and **TRACK** (Tracking Portal)",
-  //   duration: "X months contract",
-  //   status: "Delivered & Live (Placeholder Status)",
+  {
+    id: 1,
+    name: "Uarra Logistics Ecosystem",
+    client: "Zaza technologies",
+    category: "Full Contract Solution: Logistics & Multi-App Ecosystem",
+    projectScope:
+      "Four Dedicated Products: ALT (Business Admin), HERO (Driver App), MERCHANT (User App & Web), and TRACK (Tracking Portal)",
+    duration: "10 months contract",
+    status: "Delivered & Live (Placeholder Status)",
 
-  //   // --- Business Context ---
-  //   challenge:
-  //     "Small-scale logistics companies lacked a unified, affordable platform to manage their business, dispatch drivers, and provide real-time tracking, resulting in fragmented operations and poor customer service.",
-  //   description:
-  //     "A complete logistics ecosystem involving four interconnected applications and one central API: A web platform (**ALT**) for company management, two dedicated mobile apps (**HERO** for drivers, **MERCHANT** for customers), and a public tracking portal (**TRACK**).",
-  //   solution:
-  //     "Designed and delivered a centralized **Node.js/Express.js** API to handle real-time geo-location, order processing, and user authentication across all four platforms. Used **React** for web platforms and **React Native/Flutter** for the mobile applications to ensure consistency and speed.",
+    // --- Business Context ---
+    challenge:
+      "Small-scale logistics companies lacked a unified, affordable platform to manage their business, dispatch drivers, and provide real-time tracking, resulting in fragmented operations and poor customer service.",
+    description:
+      "A complete logistics ecosystem involving four interconnected applications and one central API: A web platform (ALT) for company management, two dedicated mobile apps and complementary website (HERO for drivers, MERCHANT for customers), and a public tracking portal (TRACK).",
+    solution:
+      "Designed and delivered a centralized Node.js/Express.js API to handle real-time geo-location, order processing, and user authentication across all four platforms. Used React for web platforms and React Native for the mobile applications to ensure consistency and speed.",
 
-  //   // --- Technical Details ---
-  //   stackDetails: {
-  //     webFrontend: "ALT (Admin/Web Management), TRACK (Public Tracking Portal)",
-  //     mobileApp:
-  //       "HERO (Driver App with GPS integration), MERCHANT (Customer Ordering App)",
-  //     backend:
-  //       "Node.js, Dedicated Microservices for Geo-location and Real-Time Data",
-  //     database: "PostgreSQL/MongoDB (Order Data, User Profiles)",
-  //     other:
-  //       "Real-Time Tracking (WebSockets), Payment Integration, Geocoding Services",
-  //   },
+    // --- Technical Details ---
+    stackDetails: {
+      webFrontend: "ALT (Admin/Web Management), TRACK (Public Tracking Portal)",
+      mobileApp:
+        "HERO (Driver App with GPS integration), MERCHANT (Customer Ordering App)",
+      backend:
+        "Node.js, Dedicated Microservices for Geo-location and Real-Time Data",
+      database: "MongoDB (Order Data, User Profiles)",
+      other:
+        "Real-Time Tracking (WebSockets), Payment Integration, Geocoding Services",
+    },
 
-  //   // --- Impact ---
-  //   keyMetrics: [
-  //     "Enabled real-time driver tracking with sub-3 second latency.",
-  //     "Reduced order fulfillment time by an estimated 20%.",
-  //     "Successfully supported X logistics companies at launch.",
-  //   ],
-  //   process:
-  //     "Used a **Hybrid (Agile/Scrum)** approach, focusing on independent development streams for the four products tied to common API sprints.",
+    // --- Impact ---
+    keyMetrics: [
+      "Enabled real-time driver tracking with sub-3 second latency.",
+      "Reduced order fulfillment time by an estimated 20%.",
+      "Successfully supported +10 logistics companies at launch.",
+    ],
+    process:
+      "Used a Hybrid approach, focusing on independent development streams for the four products tied to common API sprints.",
 
-  //   // pictures: uarraImage,
-  //   link: "https://uarra-link.com",
-  // },
-
+    pictures: uarraImage,
+    link: "https://uarra.com",
+  },
   {
     id: 2,
     name: "Jobbinex Professional Outsourcing Platform",
